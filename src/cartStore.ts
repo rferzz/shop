@@ -43,7 +43,7 @@ export async function addItemToCart(selectedVariantId: string) {
     await refreshCartState();
     return "Added to cart";
   } catch (error: any) {
-    throw new Error(error.message || "Failed to add to cart");
+    throw new Error(error.message || "Gagal Menambahkan ke Keranjang");
   }
 }
 
@@ -54,7 +54,7 @@ export async function removeItemFromCart(lineId: string) {
     await refreshCartState();
     return "Removed from cart";
   } catch (error: any) {
-    throw new Error(error.message || "Failed to remove item from cart");
+    throw new Error(error.message || "Gagal Menghapus Item dari Cart");
   }
 }
 
@@ -69,6 +69,6 @@ export async function updateCartItemQuantity(payload: {
     await refreshCartState();
     return "Cart updated";
   } catch (error: any) {
-    throw new Error(error.message || "Failed to update cart");
+    throw new Error(error.message || "Gagal memperbarui keranjang");
   }
 }
